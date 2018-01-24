@@ -7,70 +7,80 @@ hr {
     border: none;
 }
 
-.container{
+/*.container{
+    position: absolute;
     width: 100%;
-    margin: auto;
-    
-}
+    margin: auto;  
+    background-image: url(../img/bg.jpg);
+}*/
 
 /*стили для хидера*/
 
 .header {
+    position: relative;
     width: 100%;
     /*задаем ширину и высоту*/
-    height: 100%;
     padding: 0;
     /*убираем отступы*/
     margin: 0;
+    height: 240px;
 }
-
+.logo{
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    height: 100%;
+}
 .logo img {
     width: 100%;
-    /*задаем ширину и высоту*/
-    height: 100%;
-    object-fit: cover;
-    /*вписываем в блок*/
     margin: 0;
-    /*убираем отступы*/
     padding: 0;
+    height: 100%;
 }
 .top {
-    margin-top: -4px;
-    display: table;
-    width: 100%;
-    background-color: #528CBF;
+    position: relative;
+    padding: 0;
+    margin-top: -50px;
+    margin-right: 15px;
+    margin-bottom: 0;
+    height: 40px;
+    display: block;
+    /*background-color: #528CBF;*/
+    float: right;
+    font-size: 10px;
 }
 
 .menu ul li {
-    padding: 10px;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
 }
 
 .menu ul > li:hover {
-    background-color: #2767A0;
+    /*background-color: #2767A0;*/
 }
 
 .menu ul ul > li:hover {
-    background-color: #2767A0;
+    /*background-color: #2767A0;*/
 }
 
 .menu ul li,
 .menu ul {
-    display: table-cell;
+    display: inline-block;
 }
 
 .menu ul {
     position: relative;
     margin: 0;
     padding: 0;
-    background-color: #528CBF;
+    /*background-color: #528CBF;*/
 }
 
 .menu ul ul {
     display: none;
     position: absolute;
-    background-color: #528CBF;
+    /*background-color: #528CBF;*/
     margin-top: 10px;
-    margin-left: -10px;
+    margin-left: -1px;
 }
 
 .menu ul a {
@@ -79,12 +89,24 @@ hr {
     text-transform: uppercase;
     text-align: center;
     font-size: 14px;
-    font-family: fantasy;
+    font-family: "space_age";
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    line-height: 2.8; /*задаём высоту строки*/
+    position: relative;
 }
-
+.menu ul ul li{
+    padding: 0;
+    text-align: left;
+}
 .menu ul ul a {
+    display: inline-block;
     color: #fff;
     text-decoration: none;
+    text-align: left;
+    margin-top: 0;
+    line-height: 1.5;
 }
 
 .menu li:hover ul {
@@ -94,7 +116,20 @@ hr {
 .menu li:hover li {
     display: block;
 }
-
+.menu ul li a:after {
+	display: block;
+	position: absolute;
+	left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+	width: 0;/*задаём длинну линии до наведения курсора*/
+	height: 2px; /*задаём ширину линии*/
+	background-color: #fff; /*задаём цвет линии*/
+	content: "";
+	/*transition: width 0.3s ease-out; /*задаём время анимации*/
+}
+.menu ul li a:hover:after,
+.menu ul li a:focus:after {
+	width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
 .imglogo {
     display: table-cell;
     float: left;
@@ -113,21 +148,14 @@ hr {
 /*стили для контента*/
 
 .content {
-    width: 100%;
+    width: 99.5%;
     height: 100%;
+
 }
 
 .content p {
     text-align: center;
-    color: #2767A0;
-}
-
-.content p:first-letter {
-    font-family: "Times New Roman", Times, serif;
-    /* Гарнитура шрифта первой буквы */
-    font-size: 120%;
-    /* Размер шрифта первого символа */
-    color: blue;
+    color: #fff;
 }
 
 h2,
@@ -135,7 +163,7 @@ h3,
 h1,
 h4 {
     text-align: center;
-    color: #2767A0;
+    color: #fff;
     margin: 5px;
 }
 
@@ -144,15 +172,17 @@ h4 {
 }
 
 .catalog {
+    display: block;
     float: left;
     width: 100%;
+    vertical-align:bottom;
 }
 
 .tovar {
     text-align: center;
     width: 28%;
     float: left;
-    margin: 2%
+    margin: 2%;
 }
 
 .tovar img {
@@ -166,14 +196,14 @@ h4 {
 
 .book {
     border: solid 3px;
-    border-radius: 25px;
+    /*border-radius: 25px;*/
     border-color: #2767A0;
     padding: 5px;
     background-color: #528CBF;
     color: #fff;
     font-size: 14px;
     font-family: fantasy;
-    margin: -4px;
+    margin: 0px;
     text-transform: none;
 }
 
@@ -192,41 +222,48 @@ h4 {
 }
 
 .books p {
-    text-align: center;
-    color: #2767A0;
+    text-align: justify;
+    color: #fff;
 }
 
-.books p:first-letter {
+/*.books p:first-letter {
     font-family: "Times New Roman", Times, serif;
     /* Гарнитура шрифта первой буквы */
-    font-size: 120%;
+    /*font-size: 120%;
     /* Размер шрифта первого символа */
-    color: blue;
-}
+    /*color: blue;
+}*/
 
-.books h1,
+h1,
 h2,
 h3,
 h4 {
-    background-color: #A19FA1;
+    /*background-color: #A19FA1;*/
+    border-top: 1px solid #fff;
+    padding-bottom: 1px;
+    padding-top: 5px;
+    border-bottom: 1px solid #fff;
 }
 
 .books table {
     vertical-align: middle;
     display: inline-block;
-    border: 1px solid #2767A0;
+    border: 1px solid #fff;
     font-size: 12px;
     margin-left: 15px;
     align-items: center;
     margin-top: 20px;
     border-collapse: collapse;
+    color: #fff;
 }
 
 .books table td {
-    border: 1px solid #2767A0;
+    border: 1px solid #fff;
 }
 
 .bay {
+    margin-left: 10px;
+    margin-top: 10px;
     margin-left: 10px;
 }
 
@@ -236,7 +273,7 @@ h4 {
     text-decoration: none;
     padding: .8em 1em calc(.8em + 3px);
     border-radius: 3px;
-    background: rgb(27, 142, 150);
+    background: rgb(27, 132, 200);
     box-shadow: 0 -3px rgb(16, 110, 131) inset;
     transition: 0.2s;
     width: 86%;
@@ -253,7 +290,7 @@ h4 {
 }
 
 .list {
-    color: #2767A0;
+    color: #fff;
     text-transform: uppercase;
 }
 
@@ -267,8 +304,9 @@ h4 {
 
 .out {
     text-align: left;
+    padding: 4px;
+    color: #fff;
 }
-
 .input {
     width: 50%;
     height: auto;
@@ -277,7 +315,9 @@ h4 {
     margin: 0 auto;
     text-transform: capitalize;
 }
-
+.txt {
+    padding: 4px
+}
 .input[type="text"] {
     color: midnightblue;
     font-style: italic;
@@ -323,24 +363,49 @@ span {
 /*стили для футера*/
 
 .footer {
+    display: inline-block;
     width: 100%;
+    height: 15%;
+    float: right;
+}
+.footer img {
+    width: 100%;
+    /*задаем ширину и высоту*/
     height: 100%;
-    background-color: #528CBF;
+    object-fit: cover;
+    /*вписываем в блок*/
+    margin: 0;
+    /*убираем отступы*/
+    padding: 0;
 }
-
-.footer p {
-    text-align: right;
+.footer span{
+    display: inline-block;
+    position: absolute;
+    float: none;
+    width: 99%;
+    margin-top: 2%;
+    margin-left: 0;
+    margin-right: 0;
     color: #fff;
-    font-weight: bold;
-    margin-right: 10px
+    text-align: center;
+    font-size: 14px;
+    font-family: "space_age";
 }
-
 
 /*конец стилий для футера*/
 
 body {
-    background: #f8f8f8;
+    background: #173362;
+    margin: 2px;
+        
 }
 .catalog{
     background: #f8f8f8;
+    background: #173362;
+}
+@font-face{
+    font-family: "space_age";
+    src: url("../fonts/space_age_cyrillic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
 }
