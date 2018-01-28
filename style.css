@@ -1,0 +1,594 @@
+@font-face {
+    font-family: "space_age";
+    src: url("../fonts/space_age_cyrillic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "icomoon";
+    src: url("../fonts/IcoMoon.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 2px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1366px;
+    min-width: 714px;
+    margin: 0 auto;
+    min-height: 100%;
+    background: #173362;
+}
+
+
+/*стили для хидера*/
+
+.header {
+    position: relative;
+    min-width: 600px;
+    min-height: 354px;
+    background-image: url(img/logo.jpg);
+    background-repeat: no-repeat;
+}
+
+.logo {
+    position: absolute;
+    width: 185px;
+    height: 22px;
+    left: 28px;
+    top: 28px;
+    float: left;
+}
+
+.menu {
+    display: block;
+    position: relative;
+    float: right;
+    margin-top: 23px;
+    margin-right: 55px;
+}
+
+.menu li {
+    float: left;
+    list-style-type: none;
+}
+
+.menu li a {
+    font-family: space_age;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    text-decoration: none;
+    display: block;
+    padding: 0 10px;
+}
+
+.menu li a:hover {
+    color: #212121;
+    font-weight: bold;
+    border-bottom: 1.7px solid black;
+}
+
+
+/*стиль для маленького монитора*/
+
+@media screen and (max-width: 800px) {
+    .menu {
+        position: relative;
+        min-height: 40px;
+    }
+    .menu ul {
+        width: 180px;
+        padding: 5px 0;
+        position: absolute;
+    }
+    .menu li {
+        display: none;
+        margin: 0;
+    }
+    .menu .current {
+        display: block;
+    }
+    .menu a {
+        display: block;
+        padding: 5px 5px 5px 32px;
+        text-align: left;
+    }
+    .menu .current a {
+        background: none;
+        color: #fff;
+    }
+    /*hover menu*/
+    .menu ul:hover {
+        background-image: none;
+    }
+    .menu ul:hover li {
+        display: block;
+        margin: 0 0 5px;
+    }
+    .menu ul {
+        left: 50%;
+        margin-left: -90px;
+    }
+    .container {
+        min-width: 100%;
+        margin: 0 auto;
+        min-height: 100%;
+        background: #173362;
+    }
+    .header {
+        min-width: 100%;
+    }
+    .footer {
+        position: relative;
+        min-width: 100%!important;
+    }
+    .logo {
+        position: relative;
+    }
+}
+
+
+/*конец стилий для хидера*/
+
+
+/*стили для контента*/
+
+.content {
+    position: relative;
+    width: 99.5%;
+    height: 100%;
+}
+
+.content p {
+    text-align: center;
+    color: #fff;
+}
+
+h2,
+h3,
+h1,
+h4 {
+    text-align: center;
+    color: #fff;
+    margin: 5px;
+}
+
+.tovar img {
+    width: 20%;
+}
+
+.catalog {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.tovar {
+    display: inline-table;
+    text-align: center;
+    width: 28%;
+    float: none;
+    margin: 2%;
+}
+
+.tovar img {
+    width: 200px;
+    margin: 0;
+}
+
+.tovar a {
+    text-decoration: none;
+}
+
+.book {
+    display: inline-block;
+    border: solid 3px;
+    /*border-radius: 25px;*/
+    border-color: #2767A0;
+    padding: 5px;
+    background-color: #528CBF;
+    color: #fff;
+    font-size: 14px;
+    font-family: fantasy;
+    margin: 0px;
+    text-transform: none;
+    width: 180px;
+}
+
+.books img {
+    vertical-align: top;
+    display: inline-block;
+    outline: 5px solid #2767A0;
+    margin-top: 20px;
+    margin-left: 15px;
+    height: 350px;
+}
+
+.books img:hover {
+    outline: none;
+    text-align: left;
+}
+
+.books p {
+    text-align: justify;
+    color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    /*background-color: #A19FA1;*/
+    border-top: 1px solid #fff;
+    padding-bottom: 1px;
+    padding-top: 5px;
+    border-bottom: 1px solid #fff;
+}
+
+.books table {
+    vertical-align: middle;
+    display: inline-block;
+    border: 1px solid #fff;
+    font-size: 12px;
+    margin-left: 15px;
+    align-items: center;
+    margin-top: 20px;
+    border-collapse: collapse;
+    color: #fff;
+}
+
+.books table td {
+    border: 1px solid #fff;
+}
+
+.bay {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.bay input {
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 3px;
+    background: rgb(27, 132, 200);
+    box-shadow: 0 -3px rgb(16, 110, 131) inset;
+    transition: 0.2s;
+    width: 86%;
+    margin-top: -25px;
+}
+
+.bay input:hover {
+    background: rgb(16, 110, 131);
+}
+
+.bay input:active {
+    background: rgb(0, 90, 111);
+    box-shadow: 0 3px rgb(0, 90, 111) inset;
+}
+
+.list {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.list li:before {
+    content: "\27A4 \0020";
+}
+
+.list li {
+    list-style-type: none;
+}
+.form_sends{
+    display: table;
+    content: "";
+    line-height: 0;
+}
+.sends,
+.map{
+    display: block;
+    position: absolute;
+    width: 48.5%;
+}
+.map{
+    right: 0;
+}
+.out {
+    text-align: left;
+    padding: 4px;
+    color: #fff;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: 100%;
+}
+.buttons{
+    display: block;
+    margin: 5px;
+    position: relative;
+        
+}
+#submit,
+#reset{
+    position: absolute;
+    border: 0;
+    height: 32px;
+    color: #243140;
+    line-height: 1;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 0 18px;
+    text-align: center;
+    vertical-align: top;
+    background: #fff;
+    display: inline-block;
+    -webkit-user-drag: none;
+}
+#submit{
+    left: 0;
+}
+#reset{
+    right: 0;
+}
+.sends h3{
+    border: none;
+}
+.input {
+    width: 100%;
+    outline: none;
+    text-transform: uppercase;
+    padding: 0;
+}
+
+.txt {
+    padding: 4px
+}
+
+.input[type="text"] {
+    color: midnightblue;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.input[type="text"]::-moz-placeholder {
+    color: midnightblue;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.input[type="text"]::-webkit-input-placeholder {
+    color: midnightblue;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.input[name="body"]{
+    color: midnightblue;
+    font-size: 12px;
+    font-style: italic;
+    resize: none;
+}
+
+.input[name="body"]::-moz-placeholder{
+    color: midnightblue;
+    font-size: 12px;
+    font-style: italic;
+}
+.input[type="body"]::-webkit-input-placeholder {
+    color: midnightblue;
+    font-size: 12px;
+    font-style: italic;
+}
+
+span {
+    display: inline-block;
+    width: 10em;
+    vertical-align: top;
+}
+
+.new {
+    position: absolute;
+    left: 0;
+    top: 150px;
+}
+
+.new h2 {
+    font-family: space_age;
+    color: #fff;
+    font-size: 28px;
+    font-weight: 400;
+    text-align: left;
+    border: none;
+    margin-left: 55px;
+}
+
+.explore {
+    position: absolute;
+    right: 58px;
+    top: 162px;
+}
+
+.explore a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: space_age;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 35px;
+    text-align: center;
+    width: 262px;
+    height: 35px;
+}
+
+.explore a:hover {
+    background: url('img/arrow.png') no-repeat 246px 12px;
+}
+
+.products {
+    position: relative;
+    top: 150px;
+    left: 68px;
+    width: 90%;
+}
+
+.products ul {
+    display: inline-block;
+}
+
+.products ul li {
+    display: inline-block;
+    padding: 20px;
+}
+
+.products ul img {
+    width: 200px;
+    height: 25%;
+}
+
+.clr2 {
+    height: 184px;
+    /*стиль для невидимого блока не позволяюшего наезжать содержимому основного блока сайта*/
+}
+
+
+/*конец стилий для контента*/
+
+.clearfix {
+    clear: both;
+}
+/*стили для футера*/
+
+.footer {
+    position: relative;
+    max-width: 1366px;
+    min-width: 715px;
+    height: 128px;
+    margin: 0 auto;
+    background-image: url(img/footer.jpg);
+}
+
+.footer span {
+    display: inline-block;
+    position: absolute;
+    float: none;
+    width: 99%;
+    bottom: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    font-family: "space_age";
+    margin-bottom: 5px;
+}
+
+.contact {
+    position: absolute;
+    display: block;
+    width: 334px;
+    right: 5px;
+    top: 5px;
+}
+
+.contact h5,
+.contact p {
+    font-family: "space_age";
+    font-size: 12px;
+    color: white;
+    line-height: 1.2em;
+}
+.contact h5{
+    font-size: 13px;
+    font-weight:900;
+    border-bottom: 1px solid #fff;
+}
+.send {
+    min-height: 32px;
+    width: 330px;
+    border-width: 1px;
+    border-color: rgb(217, 222, 225);
+    border-style: solid;
+}
+
+.mail {
+    position: relative;
+    display: inline-block;
+    border: none;
+    /* Убираем рамку */
+    outline: none;
+    /* Убираем свечение в Chrome и Safari */
+    -webkit-appearance: none;
+    /* Убираем рамку в Chrome и Safari */
+    width: 286px;
+    /* Ширина поля */
+    vertical-align: middle;
+    /* Выравнивание по середине */
+    background: none;
+    height: 34px;
+    font-family: "space_age";
+    color: white;
+    font-size: 12px;
+}
+
+.submits {
+    position: absolute;
+    display: inline-block;
+    width: 34px;
+    /* Ширина кнопки */
+    height: 34px;
+    /* Высота кнопки */
+    border: none;
+    margin: 1.5px;
+    /* Убираем рамку */
+    background: url(img/send32.png) no-repeat;
+    /* Параметры фона */
+}
+
+.mail11 {
+    background-color: rgb(255, 255, 255);
+    width: 368px;
+    height: 46px;
+    font-family: Montserrat;
+    color: rgb(108, 108, 108);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    text-align: left;
+    border-width: 1px;
+    border-color: rgb(217, 222, 225);
+    border-style: solid;
+}
+
+
+/*конец стилий для футера*/
+
+.catalog {
+    background: #f8f8f8;
+    background: #173362;
+}
+.clr3 {
+    display: inline-table;
+    width: 1px;
+    clear: both;
+}
+
+.clr5 {
+    height: 15px;
+}

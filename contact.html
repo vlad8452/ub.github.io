@@ -4,60 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <title>Контакты</title>
-    <link rel="stylesheet" href="css/style.css"> </head>
+    <link rel="stylesheet" href="style.css"> </head>
 
 <body>
-<div class="container">
-    <div class="header">
-        <div class="logo"> <img src="img/logo.jpg" alt="Вселенная книг"> </div>
-        <div class="top">        
-        <div class="menu">
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="catalog.html">Каталог</a>
-                   <!-- <ul>
-                        
-                        <li><a href="catalog/book-1.html">Пустошь.&nbsp;Континент</a></li>
-                        <li><a href="catalog/book-2.html">Хроники&nbsp;тысячи&nbsp;миров</a></li>
-                        <li><a href="catalog/book-3.html">Комбат&nbsp;Империи&nbsp;зла</a></li>
-                    </ul>-->
-                </li>
-                <li><a href="#">Контакты</a></li>
-                <li><a href="about.html">О&nbsp;компании</a></li>
-            </ul>
-        </div>
-        </div>
-    </div>
-
-    <div class="content">
-        <h1>Контакты</h1>
-        <h3>Наш магазин расположен по адресу: <br>
-    Россия, г.Саратов, ул.Шелковичная 186 <br></h3>
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8c04cdf6af530ee77aee52c3a180c84cc6ff909d81afd8b41c1df51356f22cea&amp;width=100%25&amp;height=374&amp;lang=ru_RU&amp;scroll=true"></script>
-        <h2>Форма обратной связи.</h2>
-        <form name="MyForm" action="#">
-            <div class="out">
-                <input class="input" name="name" type="text" placeholder="Ваше имя" /> Ваше имя</div>
-            <div class="out">
-                <input class="input" name="email" type="text" placeholder="Электронная почта" /> Электронная почта</div>
-            <div class="out">
-                <input class="input" name="sub" type="text" placeholder="Тема сообщения" /> Тема сообщения</div> 
-            <div class="out">
-                <textarea class="input" name="body" cols="1" rows="10">Введите ваше сообщение</textarea><span class="txt">Текст сообщения</span>
-            
+    <div class="container">
+        <div class="header">
+            <a href="#"><img class="logo" src="img/booklogo.png" alt="logo"></a>
+            <div class="menu">
+                <ul>
+                    <li class="current"><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="#!">Контакты</a></li>
+                    <li><a href="about.html">О&nbsp;нас</a></li>
+                </ul>
             </div>
-            <p class="out">
-                <input id="submit" value="Отправить" type="submit" />
-                <input id="reset" value="Очистить" type="reset"> </p>
-        </form>
+        </div>
+        <div class="content">
+            <h1>Контакты</h1>
+            <h3>Наш магазин расположен по адресу: <br>
+    Россия, г.Саратов, ул.Шелковичная 186 <br></h3>
+            <div class="form_sends">
+                <div class="sends">
+
+                    <form name="MyForm" action="#">
+                    <h3>Форма обратной связи.</h3>
+                        <div class="out">
+                            <input class="input" name="name" type="text" placeholder="Ваше имя"/></div>
+                        <div class="out">
+                            <input class="input" name="email" type="text" placeholder="Электронная почта"/> </div>
+                        <div class="out">
+                            <input class="input" name="sub" type="text" placeholder="Тема сообщения" /></div>
+                        <div class="out">
+                            <textarea class="input" name="body" cols="1" rows="10" placeholder="Введите ваше сообщение"></textarea></div>
+                        <div class="buttons">
+                            <input id="submit" value="Отправить" type="submit" />
+                            <input id="reset" value="Очистить" type="reset"> </div>
+                    </form>
+                </div>
+                <div class="map">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8c04cdf6af530ee77aee52c3a180c84cc6ff909d81afd8b41c1df51356f22cea&amp;width=100%25&amp;height=374&amp;lang=ru_RU&amp;scroll=true"></script>
+                </div>
+                <div class="clr2"></div>
+            </div>
+            <div class="clr2"></div>
+            <div class="clr5"></div>
+            <div class="clearfix"></div>
+        </div>
     </div>
     <div class="footer">
-        <span>Вселенная книг&copy;&nbsp;Все права защищены &nbsp;2018</span>
-        <img src="img/footer.jpg" alt="">   
-
-    </div>
-    </div>
-
+        <form action="#">
+            <div class="contact">
+                <h5>Подпишись на новинки!</h5>
+                <p>Введите Вашу электронную почту ниже и вы всегда будете получать новости магазина.</p>
+                <div class="send">
+                    <input type="text" class="mail" placeholder="Введите ваш email">
+                    <input type="submit" class="submits" value=""> </div>
+            </div>
+        </form> <span>Вселенная книг&copy;&nbsp;Все права защищены &nbsp;2018</span> </div>
 </body>
 
 </html>
